@@ -14,7 +14,7 @@ Following sample configurations are provided:
 This file defines the recommended by Software AG configuration for the Prometheus JMX Exporter agent when configured with the UM server, when Prometheus will be used as a monitoring tool to collect all possible UM metrics.
 This configuration exports many verbose metrics which might be usefull if collecting statistical data in Prometheus is needed.
 
-## Health Monitoring Prometheus capabalities (jmx_sag_um_exporter.yaml) 
+## Health Monitoring Prometheus capabalities (jmx_sag_um_exporter_health_monitoring.yaml) 
 This file defines the recommended by Software AG configuration for the Prometheus JMX Exporter agent when configured with the UM server, when Prometheus is used to monitor UM's health.
 This configuration is more lightweight and exports only the metrics important for monitoring UM's health.
 Bellow is a short explanation how these metrics can be used for monitoring UM's server health:
@@ -59,14 +59,15 @@ Note: Value is always 1, the label "state" need to be monitored
 
 **sag_um_queue_connection_pending_total**, if number is constantly high > X, this can be an indication that client is processing events slow. X can be use case specific- 100, 200, etc.
 
+# Notes
 - For more information on the Prometheus JMX Exporter, please check [Prometheus JMX Exporter](https://github.com/prometheus/jmx_exporter).
 - For more information on how to configure the Prometheus JMX Exporter for Universal Messaging server, please follow the [Universal Messaging documentation]( https://documentation.softwareag.com/universal_messaging/num10-7/10-7_UM_webhelp/index.html#page/um-webhelp%2Fta-ops_enable_jmx_exporter_agent.html%23)
 
-Note: Universal Messaging Prometheus integration is supported from Universal Messaging version 10.7 onwards.
+**Note**: Universal Messaging Prometheus integration is supported from Universal Messaging version 10.7 onwards.
 
-Note: The jmx_sag_um_exporter.yaml is only an example of how the Prometheus JMX Exporter can be configured, customer might edit it according to their needs.
+**Note**: The jmx_sag_um_exporter.yaml and jmx_sag_um_exporter_health_monitoring.yaml are only examples of how the Prometheus JMX Exporter can be configured, customer might edit the files according to their needs.
 
-Note: Starting from version 10.11 the jmx_sag_um_exporter.yaml is shipped with the Universal Messaging server installation in following location: <UM install folder>\server\<UM server instance>\bin\jmx_sag_um_exporter.yaml. The jmx_sag_um_exporter.yaml configuration still can be used in version 10.7.
+**Note**: Starting from version 10.11 the jmx_sag_um_exporter.yaml is shipped by default with the Universal Messaging server installation in following location: <UM install folder>\server\<UM server instance>\bin\jmx_sag_um_exporter.yaml. The jmx_sag_um_exporter.yaml configuration still can be used in version 10.7.
 
   ------------------------------
 
