@@ -192,6 +192,16 @@
     help: "Outstanding"
     type: COUNTER
     
+   #Per Durable: durable Node information - Pending, Durable → Pending Events
+  - pattern: com.softwareag.um.server<type=Broker, brokerName=(\S*), destinationType=Topic, (.*), durable=(\S*), durableType=(\S*), durableName=(\S*)><>(TotalPending)
+    name:  sag_um_topic_durable_pending_total
+    labels:
+      topic_name: $2
+      durable_name: $5
+      durable_type: $4
+    help: "Pending"
+    type: COUNTER
+    
   
   #Number of Connections(Subscribers)
   #Durable Connections- Per Connection Statistics
