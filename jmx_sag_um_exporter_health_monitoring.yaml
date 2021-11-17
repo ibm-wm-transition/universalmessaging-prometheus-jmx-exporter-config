@@ -117,15 +117,24 @@
       name: $2
     help: "Used disk space"
     type: COUNTER
-  
-  #Pending
-  - pattern: com.softwareag.um.server<type=Broker, brokerName=(\S*), destinationType=Topic, destinationName=(\S*), durable=(\S*), durableType=(\S*), durableName=(\S*), subtype=(\S*)><>(Pending)
-    name: sag_um_topic_durable_connection_pending_total
+    
+  #Per Durable: durable Node information - Outstanding, Durable → Total Events
+  - pattern: com.softwareag.um.server<type=Broker, brokerName=(\S*), destinationType=Topic, (.*), durable=(\S*), durableType=(\S*), durableName=(\S*)><>(TotalEvents)
+    name:  sag_um_topic_durable_outstanding_total
     labels:
       topic_name: $2
       durable_name: $5
       durable_type: $4
-      connection: $6
+    help: "Outstanding"
+    type: COUNTER
+  
+  #Per Durable: durable Node information - Pending, Durable → Pending Events
+  - pattern: com.softwareag.um.server<type=Broker, brokerName=(\S*), destinationType=Topic, (.*), durable=(\S*), durableType=(\S*), durableName=(\S*)><>(TotalPending)
+    name:  sag_um_topic_durable_pending_total
+    labels:
+      topic_name: $2
+      durable_name: $5
+      durable_type: $4
     help: "Pending"
     type: COUNTER
     
@@ -156,11 +165,3 @@
     help: "Queue disk usage"
     type: COUNTER
   
-  #Pending
-  - pattern: com.softwareag.um.server<type=Broker, brokerName=(\S*), destinationType=Queue, (.*), Connection=(\S*), ConnectionEntry=(\S*)><>(Pending)
-    name: sag_um_queue_connection_pending_total
-    labels:
-      name: $2
-      connection: $4
-    help: "Pending"
-    type: COUNTER
