@@ -48,7 +48,9 @@ Note: Value is always 1, the label "state" need to be monitored
 
 **sag_um_topic_disk_usage_bytes**, should be smaller then X, use case specific. X can be- 500MB, 1GB, etc.
 
-**sag_um_topic_durable_connection_pending_total**, if number is constantly high > X, this can be an indication that client is processing events slow. X can be use case specific- 100, 200, etc.
+**sag_um_topic_durable_outstanding_total**, should be smaller then X, use case specific. X can be 10 000, 100 000, etc. If threshold is exceeded that means events are piling up in the durable and this can lead to heap\disk\performance problems.
+
+**sag_um_topic_durable_pending_total**, if number is constantly high > X, this can be an indication that client is processing events slow. X can be use case specific- 100, 200, etc.
 
 ### Queue
 **sag_um_queue_events_total**, should be smaller then X, use case specific. X can be 10 000, 100 000, etc. If threshold is exceeded that means events are piling up in the system and this can lead to heap\disk\performance problems.
@@ -57,7 +59,6 @@ Note: Value is always 1, the label "state" need to be monitored
 
 **sag_um_queue_disk_usage_megabytes**, should be smaller then X, use case specific. X can be- 500MB, 1GB, etc.
 
-**sag_um_queue_connection_pending_total**, if number is constantly high > X, this can be an indication that client is processing events slow. X can be use case specific- 100, 200, etc.
 
 # Notes
 - For more information on the Prometheus JMX Exporter, please check [Prometheus JMX Exporter](https://github.com/prometheus/jmx_exporter).
