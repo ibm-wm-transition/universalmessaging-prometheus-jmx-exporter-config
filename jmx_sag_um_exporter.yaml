@@ -110,7 +110,7 @@
     type: COUNTER
   
   #Thread Pool's task queue
-  - pattern: com.softwareag.um.server<type=Broker, brokerName=(\S*), threadPool=(\S*), threadPoolName=(\S*)><>(Queueed Tasks)
+  - pattern: com.softwareag.um.server<type=Broker, brokerName=(\S*), threadPool=(\S*), threadPoolName=(\S*)><>(Queued Tasks)
     name: sag_um_threadpool_queueedtasks_total
     labels:
       name: $3
