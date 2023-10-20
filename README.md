@@ -14,11 +14,11 @@ This repository provides configurations for integrating the Universal Messaging 
 - [Monitoring Universal Messaging Using Prometheus](https://documentation.softwareag.com/universal_messaging/num10-15/webhelp/num-webhelp/#page/num-webhelp%2Fto-ops_monitoring_with_prometheus.html%23)
 
 # Details
-## Full Prometheus monitoring capabalities (jmx_sag_um_exporter.yaml) 
+## Full Prometheus monitoring capabilities (jmx_sag_um_exporter.yaml) 
 - Software AG recommends this configuration for integrating the Prometheus JMX Exporter with Universal Messaging. The configuration provides metrics suitable for statistical data collection in Prometheus. These metrics are also listed in [JMX Metrics in jmx_sag_um_exporter.yaml](https://documentation.softwareag.com/universal_messaging/num10-15/webhelp/num-webhelp/#page/num-webhelp%2Fre-jmx_exporter_metrics.html%23).
 - To find all available JMX metrics for server monitoring, see [Universal Messaging JMX Metrics](https://documentation.softwareag.com/universal_messaging/num10-15/webhelp/num-webhelp/#page/num-webhelp%2Fre-jmx_metrics.html%23).
 
-## Health Monitoring Prometheus capabalities  
+## Health Monitoring Prometheus capabilities  
 For health monitoring guidelines, see [Notes on Health Monitoring with Prometheus](https://documentation.softwareag.com/universal_messaging/num10-15/webhelp/num-webhelp/#page/num-webhelp%2Fre-prometheus_metrics_usage_notes.html%23wwconnect_header).
 
 # Notes
