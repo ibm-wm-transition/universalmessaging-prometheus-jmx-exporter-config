@@ -29,4 +29,4 @@ For health monitoring guidelines, see [Notes on Health Monitoring with Prometheu
 
 ---
 
-Please note that these tools are provided "as-is" without warranty or support and do not constitute part of the Software AG product suite. Users are free to use, fork, and modify them, subject to the license agreement. While Software AG welcomes contributions, we cannot guarantee to include every contribution in the master project.
+Please note that these tools are provided "as-is" without warranty or support and do not constitute part of the webMethods product suite. Users are free to use, fork, and modify them, subject to the license agreement. While Software AG welcomes contributions, we cannot guarantee to include every contribution in the master project.
